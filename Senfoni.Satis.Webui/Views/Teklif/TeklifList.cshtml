@@ -1,0 +1,67 @@
+﻿@model List<TeklifL>
+
+@section Css{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" />
+}
+@*@section Scripts{
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+}*@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="h3">Teklif Kartlar Listesi</h1>
+        <hr />
+        <a class="btn btn-primary btn-sm" href="/Teklif/Insert">Yeni Teklif</a>
+        <hr />
+        <table id="myTable" class="table table-bordered my-3 table-striped">
+            <thead>
+                <tr>
+                    <td>Teklif Kodu</td>
+                    <td>Kullanıcı Id</td>
+                    <td>Cari Adı</td>
+                    <td>Cari Adres</td>
+                    <td>Cari Telefon</td>
+                    <td>Sipariş Tarihi</td>
+                    <td>Teslim Terihi</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ToList().Count > 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>@item.Kod</td>
+                    <td>@item.KullaniciId</td>
+                    <td>@item.CariAdi</td>
+                    <td>@item.CariAdres</td>
+                    <td>@item.CariTelefon</td>
+                    <td>@item.SiparisTarihi</td>
+                    <td>@item.TeslimTarihi</td>
+                    <td>
+                        <a asp-controller="Teklif" asp-action="TeklifEdit" asp-route-teklifId="@item.Id" class="btn btn-primary btn-sm mr-2">Güncelle</a>
+                        <form action="/Teklif/delete" method="post" style="display: inline;">
+                            <input type="hidden" name="TeklifId" value="@item.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm ">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning ">
+                        İlk Teklifinizi oluşturmak İçin Lütfen Yeni Teklif Butonuna Basınız
+                    </div>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

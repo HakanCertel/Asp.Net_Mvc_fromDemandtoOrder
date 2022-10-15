@@ -1,0 +1,59 @@
+﻿@model  IEnumerable<Cari>
+
+@section Css{
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css" />
+}
+@section Scripts{
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable();
+        });
+    </script>
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1>Cari Kartlar Listesi</h1>
+        <hr />
+        <a class="btn btn-primary btn-sm" href="/admin/cari/create">Cari Ekle</a>
+        <hr />
+        <table id="myTable" class="table table-bordered my-3">
+            <thead>
+                <tr>
+                    <td>Cari Adı</td>
+                    <td>Adres</td>
+                    <td>Telefon Numarası</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ToList().Count > 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr @*class="@(item.EmailConfirmed?"":"bg-warning")"*@>
+                            <td>@item.CariAdi</td>
+                            <td>@item.Adres</td>
+                            <td>@item.Telefon1</td>
+                            <td>
+                                <a href="/admin/cari/@item.Id" class="btn btn-primary btn-sm mr-2">Güncelle</a>
+                                <form action="/admin/cari/delete" method="post" style="display: inline;">
+                                    <input type="hidden" name="CariId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm ">Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning ">
+                        Kullanıcı Yok
+                    </div>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

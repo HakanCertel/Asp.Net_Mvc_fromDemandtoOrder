@@ -1,0 +1,14 @@
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Business.deps.json
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Business.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Business.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Data.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Entity.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Data.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\bin\Debug\netcoreapp2.1\Senfoni.Entity.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.csproj.CoreCompileInputs.cache
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.AssemblyInfoInputs.cache
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.AssemblyInfo.cs
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.csproj.CopyComplete
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Business\obj\Debug\netcoreapp2.1\Senfoni.Business.csprojAssemblyReference.cache

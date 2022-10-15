@@ -1,0 +1,86 @@
+﻿@model SiparisKayitModel
+@*<h1 class="h3">Sipair Oluşturma Sayfası</h1>
+    <hr />*@
+<form asp-controller="Siparis" asp-action="Insert" method="POST">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="h3 ">Sipariş Oluşturma Sayfası</h1>
+            <button type="submit" class="btn btn-primary mb-3">Kaydet</button>
+            <a asp-controller="Siparis" asp-action="StokSecim" class="btn btn-primary mb-3 ml-auto">Kayıt Ekle</a>
+            <hr class="mt-0" />
+        </div>
+    </div>
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="KullaniciId" />
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Siparis Kodu</span>
+                    <input asp-for="Kod" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Sipariş Tarihi</span>
+                    <input asp-for="SiparisTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">TeslimTarihi</span>
+                    <input asp-for="TeslimTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Cari Adı</span>
+                    <div>
+                        <select asp-for="CariId" asp-items="@ViewBag.CariList"></select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <table class="table table-bordered table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th width="150">Stok Kodu</th>
+                            <th>Stok Adı</th>
+                            <th width="120">Birim Fiyat</th>
+                            <th width="100">Miktar</th>
+                            <th width="100">Brut Fiyat</th>
+                            <th width="25"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.SiparisBilgileriL != null)
+                        {
+                            @foreach (var siparisBilgisi in Model.SiparisBilgileriL)
+                            {
+                                <tr>
+                                    <td hidden>
+                                        <input name="StokIds" type="hidden" value="@siparisBilgisi.StokId">
+                                    </td>
+                                    <td>@siparisBilgisi.StokKodu</td>
+                                    <td>@siparisBilgisi.StokAdi</td>
+                                    <td>@siparisBilgisi.FiyatBirim</td>
+                                    <td style="width:150px;">
+                                        <input name="Miktarlar" value="@siparisBilgisi.TalepMiktari" type="text" class="form-control">
+                                    </td>
+                                    <td>@siparisBilgisi.Fiyat</td>
+                                    <td>
+                                        <a href="/siparisolustur/@siparisBilgisi.StokId" class="btn btn-danger btn-sm">x</a>
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <div class="alert alert-info">Lütfen Kayıt Ekleyiniz</div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+</form>

@@ -1,0 +1,109 @@
+﻿@model TeklifKayitModel
+@{
+    var circle = 0;
+}
+@section Scripts{
+        <script src="~/js/site.js"></script>
+    }
+<form asp-controller="Teklif" asp-action="Insert" method="POST">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="h3 ">Tekli Oluşturma Sayfası</h1>
+            <button type="submit" class="btn btn-primary mb-3">Kaydet</button>
+            <a asp-controller="Teklif" asp-action="StokSecim" class="btn btn-primary mb-3 ml-auto">Kayıt Ekle</a>
+            <hr class="mt-0" />
+        </div>
+    </div>
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="KullaniciId" />
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Teklif Kodu</span>
+                    <input asp-for="Kod" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Sipariş Tarihi</span>
+                    <input asp-for="SiparisTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">TeslimTarihi</span>
+                    <input asp-for="TeslimTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Cari Adı</span>
+                    <div>
+                        <select asp-for="CariId" asp-items="@ViewBag.CariList"></select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <table class="table table-bordered table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th width="150">Stok Kodu</th>
+                            <th>Stok Adı</th>
+                            <th width="120">Fiyat</th>
+                            <th width="120">Birim Fiyat</th>
+                            <th width="100">Miktar</th>
+                            <th width="100">Brut Fiyat</th>
+                            <th width="25"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.TeklifBilgileriL != null)
+                        {
+                            @foreach (var teklifBilgileri in Model.TeklifBilgileriL)
+                            {
+
+                                <tr>
+                                    <td hidden>
+                                        <input name="StokIds" type="hidden" value="@teklifBilgileri.StokId">
+                                    </td>
+                                    <td id="td">@teklifBilgileri.StokKodu</td>
+                                    <td>@teklifBilgileri.StokAdi</td>
+                                    <td id="unitPrice@(circle)">@teklifBilgileri.Fiyat</td>
+                                    <td>@teklifBilgileri.FiyatBirim</td>
+                                    <td style="width:150px;">
+                                        <input id="@circle"   name="Miktarlar" type="text" class="quantity form-control">
+                                    </td>
+                                    <td id="totalPrice@(circle)">@(teklifBilgileri.TalepMiktari * teklifBilgileri.Fiyat)</td>
+                                    <td id="@(circle+=1)">
+                                        <a href="/teklif/create/@teklifBilgileri.StokId" class="btn btn-danger btn-sm">x</a>
+                                    </td>
+                                    
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <div class="alert alert-info">Lütfen Kayıt Ekleyiniz</div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-md-2">
+            <div class="text-left">
+                <h4>Cart Summary</h4>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Cart Total</th>
+                            <td>@*@Model.TotalPrice().ToString("c")*@</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="/" class="btn btn-primary">Alışverişe Devam</a>
+                    <a href="/checkout" class="btn btn-primary">CheckOut</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script src="~/js/site.js"></script>

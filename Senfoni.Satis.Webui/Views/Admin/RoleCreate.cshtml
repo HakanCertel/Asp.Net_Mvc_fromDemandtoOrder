@@ -1,0 +1,14 @@
+﻿@model RoleModel
+<h1 class="h3">Rol Ekle</h1>
+<hr />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-controller="Admin" asp-action="RoleCreate" method="POST">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+</div>

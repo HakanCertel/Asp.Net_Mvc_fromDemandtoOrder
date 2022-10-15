@@ -1,0 +1,74 @@
+﻿@model SiparisEditModel
+
+
+<form style="display:inline" asp-controller="Siparis" asp-action="SiparisEdit" method="POST">
+    <button type="submit" class="btn btn-primary mb-3">Kaydet</button>
+    <a asp-controller="Siparis" asp-action="StokSecim" class="btn btn-primary mb-3">Kayıt Ekle</a>
+
+    <hr class="mt-0" />
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="KullaniciId" />
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Sipariş Kodu</span>
+                    <input asp-for="Kod" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Sipariş Tarihi</span>
+                    <input asp-for="SiparisTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">TeslimTarihi</span>
+                    <input asp-for="TeslimTarihi" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <span class="form-group-item">Cari Adı</span>
+                    <div>
+                        <select asp-for="CariId" asp-items="@ViewBag.CariList"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table table-bordered table-sm table-striped">
+                    <thead>
+                        <tr>
+                            <th>Stok Kodu</th>
+                            <th>Stok Adı</th>
+                            <th>Miktar</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.StokIds.Count() != 0)
+                        {
+                            for (int i = 0; i < Model.StokIds.Count(); i++)
+                            {
+                                <tr>
+                                    <td hidden>
+                                        <input asp-for="@Model.StokIds[i]" type="hidden">
+                                    </td>
+                                    <td>@Model.StokKodu[i]</td>
+                                    <td>@Model.StokAdi[i]</td>
+                                    <td style="width:150px;">
+                                        <input asp-for="@Model.Miktarlar[i]" type="text" class="form-control">
+                                    </td>
+                                    <td>
+                                        <a asp-controller="Siparis" asp-action="SiparisEditHareketSil" asp-route-stokId="@Model.StokIds[i]" class="btn btn-danger btn-sm">x</a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <div class="alert alert-info">Lütfen Kayıt Ekleyiniz</div>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</form>

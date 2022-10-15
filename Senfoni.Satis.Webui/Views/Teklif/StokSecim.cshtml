@@ -1,0 +1,54 @@
+﻿@model StokSecimModel
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Stok Listesi</h1>
+        <hr />
+        @if (Model.KayitInsert)
+        {
+            <a href="/teklif/create" class="btn btn-primary btn-sm mr-2">Teklif Sayfasına Dön</a>
+        }
+        else if(Model.KayitUpdate)
+        {
+            <a href="/teklif/edit" class="btn btn-primary btn-sm mr-2">Teklif Sayfasına Dön</a>
+        }
+        <hr />
+        <table class="table table-bordered my-3">
+            <thead>
+                <tr>
+                    <td>Stok Kodu</td>
+                    <td>Stok Adı</td>
+                    <td>Birim Fiyat</td>
+                    <td>Fiyat</td>
+                    <td>Stok Miktarı</td>
+                    <td style="width:180px;"></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ListelenecekKayitlar.ToList().Count > 0)
+                {
+                    @foreach (var item in Model.ListelenecekKayitlar)
+                    {
+                        <tr>
+                            <td>@item.Kod</td>
+                            <td>@item.StokAdi</td>
+                            <td>@item.FiyatBirim</td>
+                            <td>@item.Fiyat</td>
+                            <td>@item.StokMiktari</td>
+                            <td>
+                                <a asp-controller="Teklif" asp-action="StokSecim" asp-route-id="@item.Id" class="btn btn-primary btn-sm mr-2">Seç</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning ">
+                        Ürün Yok
+                    </div>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

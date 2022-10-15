@@ -1,0 +1,16 @@
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\Senfoni.Data.deps.json
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\Senfoni.Data.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\Senfoni.Data.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\Senfoni.Entity.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\Senfoni.Entity.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.csprojAssemblyReference.cache
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.csproj.CoreCompileInputs.cache
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.AssemblyInfoInputs.cache
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.AssemblyInfo.cs
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.csproj.CopyComplete
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\obj\Debug\netstandard2.0\Senfoni.Data.pdb
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\EntityFramework.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\EntityFramework.SqlServer.dll
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\EntityFramework.xml
+C:\Users\90543\source\repos\SenfoniWeb\Senfoni.Data\bin\Debug\netstandard2.0\EntityFramework.SqlServer.xml

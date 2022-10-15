@@ -1,0 +1,46 @@
+﻿@model List<StokL>
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Stok Listesi</h1>
+        <hr />
+        <a class="btn btn-primary btn-sm" href="/stok/list/create">Stok Ekle</a>
+        <table class="table table-bordered my-3">
+            <thead>
+                <tr>
+                    <td style="width:100px;">Id</td>
+                    <td>Stok Kodu</td>
+                    <td>Stok Adı</td>
+                    <td style="width:180px;"></td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ToList().Count > 0)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Kod</td>
+                            <td>@item.StokAdi</td>
+                            <td>
+                                <a href="/admin/role/edit/@item.Id" class="btn btn-primary btn-sm mr-2">Güncelle</a>
+                                <form action="/admin/role/delete" method="post" style="display: inline;">
+                                    <input type="hidden" name="RoleId" value="@item.Id" />
+                                    <button type="submit" class="btn btn-danger btn-sm ">Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div class="alert alert-warning ">
+                        Ürün Yok
+                    </div>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
