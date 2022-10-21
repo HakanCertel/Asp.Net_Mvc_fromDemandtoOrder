@@ -13315,11 +13315,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Satis.Webui\\Senfoni.Satis.Webui.csproj",
+      "projectUniqueName": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Satis.Webui\\Senfoni.Satis.Webui.csproj",
       "projectName": "Senfoni.Satis.Webui",
-      "projectPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Satis.Webui\\Senfoni.Satis.Webui.csproj",
+      "projectPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Satis.Webui\\Senfoni.Satis.Webui.csproj",
       "packagesPath": "C:\\Users\\90543\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Satis.Webui\\obj\\",
+      "outputPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Satis.Webui\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13338,11 +13338,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Business\\Senfoni.Business.csproj": {
-              "projectPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Business\\Senfoni.Business.csproj"
+            "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Business\\Senfoni.Business.csproj": {
+              "projectPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Business\\Senfoni.Business.csproj"
             },
-            "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Data\\Senfoni.Data.csproj": {
-              "projectPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Data\\Senfoni.Data.csproj"
+            "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Data\\Senfoni.Data.csproj": {
+              "projectPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Data\\Senfoni.Data.csproj"
             }
           }
         }

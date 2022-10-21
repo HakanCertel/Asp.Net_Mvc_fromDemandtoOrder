@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Entit\\Senfoni.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Entit\\Senfoni.Entity.csproj",
       "projectName": "Senfoni.Entity",
-      "projectPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Entit\\Senfoni.Entity.csproj",
+      "projectPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Entit\\Senfoni.Entity.csproj",
       "packagesPath": "C:\\Users\\90543\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\90543\\Desktop\\github\\SenfoniWeb\\Senfoni.Entit\\obj\\",
+      "outputPath": "C:\\Users\\90543\\Documents\\GitHub\\Asp.Net_Mvc_fromDemandtoOrder\\Senfoni.Entit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
